@@ -18,7 +18,7 @@ function Footer() {
     ];
   
     return (
-      <footer className=" bg-theme-gradient w-full py-14">
+      <footer className=" bg-theme-gradient w-full py-14 shadow-xl">
         <div className="w-full xl:w-container mx-auto px-8 text-gray-400 lg:grid grid-cols-2 text-sm">
           {/* Left Section */}
           <div className="mr-0 lg:mr-40">

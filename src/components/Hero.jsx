@@ -1,7 +1,7 @@
 
 const Hero = () => {
     return (
-      <section className="flex flex-col items-center text-center bg-gradient-to-b from-blue-50 to-blue-100 py-16 px-4">
+      <section className="flex flex-col items-center justify-center mx-auto lg:h-[1000px] text-center bg-gradient-to-b from-blue-50 to-blue-100 py-16 px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6">
           Transforming Financial Chaos into Sustainable Growth
         </h2>

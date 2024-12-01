@@ -126,7 +126,7 @@ const Services = () => {
           </p>
         </div>
   
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="w-full max-w-none grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-6">
           {services.map((service, index) => (
             <div
               key={index}
@@ -145,14 +145,6 @@ const Services = () => {
           ))}
         </div>
   
-        <div className="text-center mt-16">
-          <a
-            href="#contact"
-            className="px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-lg hover:bg-blue-700 transition duration-300"
-          >
-            Contact Us to Learn More
-          </a>
-        </div>
       </section>
     );
   };

@@ -79,10 +79,10 @@ const Achievements = () => {
             key={index}
             className="bg-white text-gray-800 p-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
             style={{
-              height: openCard === index ? "auto" : "250px", // Adjust height based on whether the card is open or closed
+              height: openCard === index ? "auto" : "130px", // Adjust height based on whether the card is open or closed
             }}
           >
-            <h3 className="text-2xl font-semibold text-blue-600 mb-4">{achievement.title}</h3>
+            <h3 className="text-lg font-semibold text-blue-600 mb-4">{achievement.title}</h3>
 
             {/* Read More Button */}
             <button
