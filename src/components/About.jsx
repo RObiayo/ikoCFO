@@ -14,12 +14,12 @@ const About = () => {
           {/* Introduction */}
           <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
             <div className="flex-1 space-y-6">
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 sm:text-sm md:text-lg leading-relaxed">
                 <span className="font-semibold text-blue-600">IKO CFO</span> is a premier financial consultancy firm in East Africa, 
                 led by <span className="font-semibold text-gray-800">Rupal Sheth</span>, a seasoned financial architect with over two 
                 decades of experience across various sectors including manufacturing, automotive, FMCG, and retail.
               </p>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 text-sm md:text-lg leading-relaxed">
                 Our mission is to transform complex business environments into streamlined, profitable entities. 
                 We specialize in business restructuring, leadership solutions, fundraising, business automation, and improved cash flow management. 
                 Our approach combines cutting-edge financial strategies with practical, real-world solutions to drive sustainable growth and operational excellence.
