@@ -10,9 +10,9 @@ const About = () => {
         </div>
   
         {/* Content Section */}
-        <div className="max-w-6xl mx-auto space-y-12">
+        <div className="max-w-6xl mx-auto space-y-10">
           {/* Introduction */}
-          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
             <div className="flex-1 space-y-6">
               <p className="text-gray-600 sm:text-sm md:text-lg leading-relaxed">
                 <span className="font-semibold text-blue-600">IKO CFO</span> is a premier financial consultancy firm in East Africa, 
@@ -28,21 +28,21 @@ const About = () => {
             <div className="lg:flex-1 lg:pl-8">
               <div className="relative p-6 border-2 border-gray-200 rounded-lg bg-white shadow-lg">
                 <h3 className="text-2xl font-bold text-blue-600 mb-4">Core Expertise</h3>
-                <ul className="space-y-2 text-gray-600 text-lg">
+                <ul className="space-y-2 list-disc  text-gray-600 text-lg">
                   <li className="flex items-start gap-3">
-                    <span className="text-blue-600 font-bold text-xl">✔</span> Business Restructuring
+                    <span className="text-blue-600 font-bold text-xl"></span> Business Restructuring
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-blue-600 font-bold text-xl">✔</span> Leadership Solutions
+                    <span className="text-blue-600 font-bold text-xl"></span> Leadership Solutions
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-blue-600 font-bold text-xl">✔</span> Fundraising
+                    <span className="text-blue-600 font-bold text-xl"></span> Fundraising
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-blue-600 font-bold text-xl">✔</span> Business Automation
+                    <span className="text-blue-600 font-bold text-xl"></span> Business Automation
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-blue-600 font-bold text-xl">✔</span> Cash Flow Management
+                    <span className="text-blue-600 font-bold text-xl"></span> Cash Flow Management
                   </li>
                 </ul>
               </div>
@@ -50,10 +50,10 @@ const About = () => {
           </div>
   
           {/* Vision and Mission */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-2  gap-5 lg:gap-12">
             {/* Vision */}
             <div className="p-8 bg-transparent shadow-lg rounded-lg border-t-4 border-blue-600">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Our Vision</h3>
+              <h3 className=" text-lg:text-2xl font-bold text-gray-800 mb-4">Our Vision</h3>
               <p className="text-gray-600 text-lg leading-relaxed">
                 To be the most trusted and innovative financial consultancy firm in East Africa, empowering businesses to achieve sustainable growth and operational excellence.
               </p>
@@ -61,7 +61,7 @@ const About = () => {
   
             {/* Mission */}
             <div className="p-8 bg-transparent shadow-lg rounded-lg border-t-4 border-blue-600">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
+              <h3 className=" text-xl lg:text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
               <p className="text-gray-600 text-lg leading-relaxed">
                 At <span className="font-semibold text-blue-600">IKO CFO</span>, our mission is to provide comprehensive financial and operational solutions that shift businesses from chaos to order, 
                 driving resource efficiencies and sustainable profitability. 

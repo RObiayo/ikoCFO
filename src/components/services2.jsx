@@ -118,7 +118,7 @@ const Services = () => {
     ];
   
     return (
-      <section className="px-6 py-16 bg-gray-50">
+      <section className="px-6 py-16 ">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-800 mb-4">Our Services</h1>
           <p className="text-lg text-gray-600 mb-6">
@@ -130,7 +130,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="p-6 bg-white rounded-lg shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-blue-800"
+              className="p-6 bg-white  rounded-lg shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-blue-800"
             >
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">{service.title}</h3>
               <ul className="space-y-4">

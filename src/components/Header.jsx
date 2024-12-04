@@ -20,11 +20,15 @@ const Header = () => {
   };
 
   return (
-    <header className="shadow-md w-full sticky top-0 left-0 z-50 bg-white">
+    <header className="shadow-md lg:h-[100px] flex w-full sticky top-0 left-0 z-50 bg-theme-gradient opacity-90">
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6 md:px-10">
         {/* Logo */}
+        <div className="flex flex-col lg:flex-row">
+        <img src="" alt="logo" />
+        
         <div className="font-bold text-2xl flex items-center">
           <span>IKO CFO</span>
+        </div>
         </div>
 
         {/* Menu Icon for Mobile */}

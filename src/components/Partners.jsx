@@ -9,7 +9,7 @@ const Partners = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-gray-100">
+    <section className="py-16 ">
       <h2 className="text-center text-4xl font-bold text-gray-900 mb-12">
         Our Trusted Partners
       </h2>

@@ -4,16 +4,16 @@ const Hero = () => {
   return (
     <section className="p-5 relative flex items-center justify-center lg:h-screen bg-gradient-to-b from-blue-50 to-blue-100 px-6 overflow-hidden">
       {/* Background Illustration */}
-      <div className="absolute inset-0 bg-[url('/path-to-image.jpg')] bg-cover bg-center opacity-30"></div>
+      <div className="absolute inset-0 bg-[url('/Board1.jpg')] bg-fixed bg-cover bg-center opacity-90"></div>
 
       {/* Decorative Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-100"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-red-200 opacity-90"></div>
 
       {/* Content Wrapper */}
       <div className="relative z-10 w-full">
         {/* Heading */}
         <motion.h2
-          className="w-full text-center p-2 text-3xl sm:text-6xl lg:text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-500 leading-tight drop-shadow-md mb-6"
+          className="w-full text-center p-2 text-2xl sm:text-4xl lg:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-500 leading-tight drop-shadow-md mb-6"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -38,10 +38,10 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          <button className="p-1 lg:px-8 lg:py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white sm:text-sm lg:text-lg font-medium rounded-lg shadow-lg hover:scale-105 transition transform duration-300">
+          <button className="p-0.5 md:p-2 lg:px-8 lg:py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white   text-xl lg:text-lg font-medium rounded-lg shadow-lg hover:scale-105 transition transform duration-300">
             Explore Our Services
           </button>
-          <button className="px-8 py-3 bg-white text-gray-800 border border-gray-300 text-lg font-medium rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
+          <button className="p-3 text-xl lg:px-8 lg:py-3 bg-white text-gray-800 border border-gray-300 md:text-lg font-medium rounded-lg shadow-md hover:bg-gray-100 transition duration-300">
             Get in Touch
           </button>
         </motion.div>
