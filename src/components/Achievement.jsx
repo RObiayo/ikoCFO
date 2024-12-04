@@ -65,7 +65,7 @@ const Achievements = () => {
   return (
     <section className="px-6 py-16  text-white">
       <div className="text-center mb-16">
-        <h1 className="text-5xl font-extrabold text-white mb-6 animate__animated animate__fadeIn">Key Achievements</h1>
+        <h1 className=" text-3xl lg:text-5xl font-extrabold text-white mb-6 animate__animated animate__fadeIn">Key Achievements</h1>
         <p className="text-lg text-white opacity-80 mb-8 animate__animated animate__fadeIn animate__delay-1s">
           Discover the significant milestones and results achieved through strategic planning, process optimization, and financial expertise.
         </p>

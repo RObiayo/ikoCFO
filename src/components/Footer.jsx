@@ -22,7 +22,7 @@ function Footer() {
         <div className="w-full xl:w-container mx-auto px-8 text-gray-400 lg:grid grid-cols-2 text-sm">
           {/* Left Section */}
           <div className="mr-0 lg:mr-40">
-            <img className="w-logo" src="/logo.png" alt="Company Logo" />
+            <img className="w-logo" src="./logo.svg" width={29} alt="Company Logo" />
             <p className="my-8 leading-relaxed">
               Manage your files efficiently and easily with a simple, fast, and small file manager.
             </p>

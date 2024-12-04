@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const Header = () => {
@@ -10,25 +10,31 @@ const Header = () => {
     { name: "CONTACT", link: "contact" },
   ];
 
-  const [open, setOpen] = useState(false); // State for mobile menu toggle
+  const [open, setOpen] = useState(false);
+  const [headerOpacity, setHeaderOpacity] = useState(1);
 
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setHeaderOpacity(currentScrollY > 50 ? 1 - Math.min(currentScrollY / 200, 1) : 1);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className="shadow-md lg:h-[100px] flex w-full sticky top-0 left-0 z-50 bg-theme-gradient opacity-90">
+    <header
+      style={{ opacity: headerOpacity }}
+      className={`fixed top-0 left-0 w-full overflow-hidden transition-opacity duration-300 shadow-md bg-white z-50`}
+    >
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6 md:px-10">
         {/* Logo */}
-        <div className="flex flex-col lg:flex-row">
-        <img src="" alt="logo" />
-        
-        <div className="font-bold text-2xl flex items-center">
-          <span>IKO CFO</span>
-        </div>
+        <div className="flex items-center">
+          <img src="iko-cfo-logo.svg" width={50} alt="IKO CFO Logo" className="bg-transparent" />
+          <h1 className="font-bold text-2xl ml-2 text-gray-800">IKO CFO</h1>
         </div>
 
         {/* Menu Icon for Mobile */}
@@ -47,16 +53,13 @@ const Header = () => {
           }`}
         >
           {Links.map((link, index) => (
-            <li
-              key={index}
-              className="md:ml-8 md:my-0 my-4 font-semibold text-center"
-            >
+            <li key={index} className="md:mx-4 my-2 md:my-0">
               <button
                 onClick={() => {
-                  scrollToSection(link.link);
-                  setOpen(false); // Close menu on click (mobile)
+                  document.getElementById(link.link).scrollIntoView({ behavior: "smooth" });
+                  setOpen(false);
                 }}
-                className="text-gray-800 hover:bg-theme-gradient hover:text-white transition-all duration-500 p-2 rounded w-full md:w-auto"
+                className="text-gray-800 hover:bg-theme-gradient hover:text-white transition-all duration-300 px-4 py-2 rounded"
               >
                 {link.name}
               </button>
@@ -64,7 +67,7 @@ const Header = () => {
           ))}
           {/* Button */}
           <li className="md:ml-8 text-center">
-            <button className="bg-theme-gradient text-white font-semibold px-4 py-2 rounded duration-500 hover:bg-blue-700 hover:shadow-lg">
+            <button className="bg-theme-gradient text-white font-semibold px-4 py-2 rounded duration-300 hover:bg-blue-700 hover:shadow-lg">
               Get In Touch
             </button>
           </li>

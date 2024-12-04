@@ -118,26 +118,26 @@ const Services = () => {
     ];
   
     return (
-      <section className="px-6 py-16 ">
+      <section className="lg:px-4 lg:py-14 ">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-800 mb-4">Our Services</h1>
-          <p className="text-lg text-gray-600 mb-6">
+          <h1 className=" text-3xl md:text-4xl  lg:text-5xl font-bold text-gray-800 mb-4">Our Services</h1>
+          <p className="lg:text-lg text-sm md:text-lg text-gray-900 font-semibold mb-6">
             At IKO CFO, we provide expert financial consulting to help your business thrive in an ever-changing environment. Explore our services that can transform your operations and set you up for sustainable success.
           </p>
         </div>
   
-        <div className="w-full max-w-none grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-6">
+        <div className="w-full max-w-none grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 lg:gap-12 lg:px-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="p-6 bg-white  rounded-lg shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-blue-800"
+              className="lg:p-6 md:p-4 p-2  bg-white  rounded-lg shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-blue-800"
             >
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">{service.title}</h3>
+              <h3 className=" text-lg md:text-2xl lg:text-2xl font-semibold text-gray-800 mb-4">{service.title}</h3>
               <ul className="space-y-4">
                 {service.items.map((item, subIndex) => (
                   <li key={subIndex}>
-                    <h4 className="text-lg font-bold text-blue-600 mb-2">{item.subTitle}</h4>
-                    <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                    <h4 className="text-sm md:text-lg lg:text-lg font-bold text-blue-600 mb-2">{item.subTitle}</h4>
+                    <p className="text-gray-600 leading-relaxed text-xs md:text-sm lg:text-lg">{item.description}</p>
                   </li>
                 ))}
               </ul>

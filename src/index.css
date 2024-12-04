@@ -4,4 +4,8 @@
 
 body {
     background: bg-theme-gradient;
+    padding-top: 58px;
 }
+header {
+    overflow: hidden; /* Prevent overflow */
+  }
