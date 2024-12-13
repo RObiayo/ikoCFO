@@ -9,7 +9,7 @@ const Partners = () => {
   ];
 
   return (
-    <section className="p-6 shadow-2xl ">
+    <section className="p-6  ">
       <h2 className="text-center text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-8">
         Our Trusted Partners
       </h2>

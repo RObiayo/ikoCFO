@@ -12,6 +12,9 @@ import Achievements from './components/Achievement';
 import Services from './components/services2';
 import About from './components/About';
 import Hero from './components/hero';
+import OurServices from './components/Services';
+
+import HeroSection from './components/Hero2';
 
 
 
@@ -20,25 +23,25 @@ function App() {
 
   return (
 <Router>
-      <div className="bg-[url('/Board1.jpg')] bg-fixed bg-cover bg-center">
+      <div className=" m-0" >
         <Header />
         <div className="scroll-mt-16">
           <Routes>
             <Route path="/" element={
               <>
-                <section id="home">
-                  <Hero />
+                <section id="home" className='bg-white opacity-95'>
+                  <HeroSection />
                 </section>
-                <section id="about" className="bg-theme-gradient opacity-85">
+                <section id="about" className="bg-white opacity-95">
                   <About />
                 </section>
-                <section id="services" className="bg-theme-gradient opacity-85">
-                  <Services />
+                <section id="services" className="bg-white opacity-95">
+                  <OurServices />
                 </section>
-                <section id="achievements" className="bg-theme-gradient opacity-85">
+                <section id="achievements" className="bg-white opacity-95">
                   <Achievements />
                 </section>
-                <section id="contact" className="bg-theme-gradient opacity-85 ">
+                <section id="contact" className="bg-white opacity-95 ">
                   <Partners />
                 </section>
               </>

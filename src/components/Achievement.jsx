@@ -63,17 +63,17 @@ const Achievements = () => {
   };
 
   return (
-    <section className="px-6 py-16  text-white">
+    <section className="px-6 py-16 ">
       <div className="text-center mb-16">
-        <h1 className=" text-3xl lg:text-5xl font-extrabold text-white mb-6 animate__animated animate__fadeIn">Key Achievements</h1>
-        <p className="text-lg text-white opacity-80 mb-8 animate__animated animate__fadeIn animate__delay-1s">
+        <h1 className=" text-3xl lg:text-5xl font-extrabold  mb-6 animate__animated animate__fadeIn">Key Achievements</h1>
+        <p className="text-lg opacity-80 mb-8 animate__animated animate__fadeIn animate__delay-1s">
           Discover the significant milestones and results achieved through strategic planning, process optimization, and financial expertise.
         </p>
 
       </div>
 
       {/* Cards Layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-full">
         {achievements.map((achievement, index) => (
           <div
             key={index}

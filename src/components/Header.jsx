@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <header
       style={{ opacity: headerOpacity }}
-      className={`fixed top-0 left-0 w-full overflow-hidden transition-opacity duration-300 shadow-md bg-white z-50`}
+      className={`fixed top-0 left-0 w-full overflow-hidden transition-opacity duration-300  bg-white z-50`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-6 md:px-10">
         {/* Logo */}

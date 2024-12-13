@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const OurServices = () => {
     const services = [
       {
@@ -116,42 +118,60 @@ const OurServices = () => {
         ],
       },
     ];
-  
-    return (
-      <section className="px-6 py-16 bg-gray-50">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 tracking-wide relative inline-block">
-            Our Services
-            <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-600 rounded"></span>
-          </h2>
-        </div>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          {services.map((service, index) => (
+
+  const [openIndex, setOpenIndex] = useState(null); // State to manage which card is open
+
+  const handleToggle = (index) => {
+    setOpenIndex(openIndex === index ? null : index); // Toggle the selected card
+  };
+
+  return (
+    <section className="px-6 py-16 ">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-gray-800 tracking-wide relative inline-block">
+          Our Services
+          <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-blue-600 rounded"></span>
+        </h2>
+      </div>
+      <div className="w-full max-w-none grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 lg:gap-12 lg:px-6">
+        {services.map((service, index) => {
+          const isOpen = openIndex === index; // Check if the current card is open
+
+          return (
             <div
               key={index}
-              className="p-6 bg-white rounded-lg shadow-md border-t-4 border-blue-600 transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-blue-800"
+              className="p-6 bg-white rounded-lg shadow-md  transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-blue-800"
             >
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+              <h3
+                className="text-2xl font-semibold text-gray-800 mb-4 cursor-pointer flex justify-between items-center"
+                onClick={() => handleToggle(index)} // Toggle dropdown on click
+              >
                 {service.title}
+                <span className={`transform transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+                  ▼
+                </span>
               </h3>
-              <ul className="space-y-4">
-                {service.items.map((item, subIndex) => (
-                  <li key={subIndex}>
-                    <h4 className="text-lg font-bold text-blue-600 mb-2">
-                      {item.subTitle}
-                    </h4>
-                    <p className="text-gray-600 leading-relaxed">
-                      {item.description}
-                    </p>
-                  </li>
-                ))}
-              </ul>
+              {isOpen && (
+                <ul className="space-y-4">
+                  {service.items.map((item, subIndex) => (
+                    <li key={subIndex}>
+                      <h4 className="text-lg font-bold text-blue-600 mb-2">
+                        {item.subTitle}
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed">
+                        {item.description}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
-          ))}
-        </div>
-      </section>
-    );
-  };
-  
-  export default OurServices;
-  
+          );
+        })}
+      </div>
+      
+    </section>
+  );
+};
+
+export default OurServices;

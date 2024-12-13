@@ -3,9 +3,39 @@
 @tailwind utilities;
 
 body {
-    background: bg-theme-gradient;
+    margin: 0;
+    padding: 0;
     padding-top: 58px;
+
 }
 header {
     overflow: hidden; /* Prevent overflow */
   }
+
+.section {
+    border: none; /* Remove any borders */
+    margin: 0; /* Remove margins */
+    padding: 0; /* Remove padding */
+    background-color: transparent; /* Ensure background is transparent */
+}
+
+.custom-shape-divider-bottom-1733999735 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1733999735 svg {
+    position: relative;
+    display: block;
+    width: calc(117% + 1.3px);
+    height: 176px;
+}
+
+.custom-shape-divider-bottom-1733999735 .shape-fill {
+    fill: #FFFFFF;
+}
+
