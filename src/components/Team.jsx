@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const teamMembers = [
   {
@@ -10,7 +10,7 @@ const teamMembers = [
       linkedin: 'https://www.linkedin.com/in/johndoe',
       twitter: 'https://twitter.com/johndoe',
     },
-    image: 'https://via.placeholder.com/150',
+    image: 'Man2.jpg',
   },
   {
     name: 'Jane Smith',
@@ -21,7 +21,7 @@ const teamMembers = [
       linkedin: 'https://www.linkedin.com/in/janesmith',
       twitter: 'https://twitter.com/janesmith',
     },
-    image: 'https://via.placeholder.com/150',
+    image: 'Woman2.jpg',
   },
   {
     name: 'Alice Johnson',
@@ -32,7 +32,7 @@ const teamMembers = [
       linkedin: 'https://www.linkedin.com/in/alicejohnson',
       twitter: 'https://twitter.com/alicejohnson',
     },
-    image: 'https://via.placeholder.com/150',
+    image: 'Woman.jpg',
   },
   {
     name: 'Bob Brown',
@@ -43,19 +43,19 @@ const teamMembers = [
       linkedin: 'https://www.linkedin.com/in/bobbrown',
       twitter: 'https://twitter.com/bobbrown',
     },
-    image: 'https://via.placeholder.com/150',
+    image: 'Alvin.jpg',
   },
 ];
 
 const TeamSection = () => {
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-18 ">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold text-gray-800 mb-4">Meet Our  Team</h2>
         <p className="text-lg text-gray-600 mb-12">
           Our team is dedicated to driving success and innovation.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
             <div
               key={index}
@@ -70,15 +70,15 @@ const TeamSection = () => {
               <p className="text-gray-500 mb-2">{member.title}</p>
               <p className="text-gray-600 mb-1">{member.email}</p>
               <p className="text-gray-600 mb-4">{member.phone}</p>
-              <div className="flex justify-center space-x-4 mt-4">
+              <div className="flex justify-center space-x-2 mt-4">
                 {member.socialLinks.linkedin && (
                   <a href={member.socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
-                    <img src="https://via.placeholder.com/24?text=LI" alt="LinkedIn" className="w-6 h-6" />
+                    <img src="linkedin.png" alt="LinkedIn" className="w-6 h-6" />
                   </a>
                 )}
                 {member.socialLinks.twitter && (
                   <a href={member.socialLinks.twitter} target="_blank" rel="noopener noreferrer">
-                    <img src="https://via.placeholder.com/24?text=TW" alt="Twitter" className="w-6 h-6" />
+                    <img src="twitter.png" alt="Twitter" className="w-6 h-6" />
                   </a>
                 )}
               </div>
