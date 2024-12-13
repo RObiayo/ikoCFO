@@ -7,7 +7,7 @@ import Header from './components/Header';
 
 
 
-import Partners from './components/Partners';
+
 import Achievements from './components/Achievement';
 
 import About from './components/About';
@@ -15,6 +15,8 @@ import About from './components/About';
 import OurServices from './components/Services';
 
 import HeroSection from './components/Hero2';
+import TeamSection from './components/Team';
+
 
 
 
@@ -42,7 +44,8 @@ function App() {
                   <Achievements />
                 </section>
                 <section id="contact" className="bg-white opacity-95 ">
-                  <Partners />
+                  <TeamSection />
+
                 </section>
               </>
             } />
