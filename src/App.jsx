@@ -9,9 +9,9 @@ import Header from './components/Header';
 
 import Partners from './components/Partners';
 import Achievements from './components/Achievement';
-import Services from './components/services2';
+
 import About from './components/About';
-import Hero from './components/hero';
+
 import OurServices from './components/Services';
 
 import HeroSection from './components/Hero2';
